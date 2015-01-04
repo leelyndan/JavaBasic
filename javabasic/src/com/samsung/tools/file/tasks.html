@@ -1,0 +1,2499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Task Management</title>
+<link rel="shortcut icon" type="image/x-icon" href="/WTMS/resources/samsung.ico" media="screen" />
+<link href="/WTMS/css/base.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="/WTMS/css/taskmanagement/taskManagement.css"
+	rel="stylesheet" type="text/css">
+<script type="text/javascript"
+	src="/WTMS/js/jquery-1.11.1.js"></script>
+<script type="text/javascript"
+	src="/WTMS/js/taskmanagement/taskManagement.js"></script>
+<script type="text/javascript"> 
+	var contextPath = '/WTMS';
+	var taskType = '';
+	var search= decodeURI('');
+	var filterType = '';
+</script>
+</head>
+<body>
+	<div id="task_management_frame">
+		<div id="task_management_tool_bar">
+			<select id="filter_type">
+				<option value="">ALL</option>
+				<option value="01">RFC Work</option>
+				<option value="02">etc</option>
+				<option value="03">Knowledge Transfer</option>
+				<option value="04">Training & Study</option>
+				<option value="05">Leave</option>
+				<option value="06">Install(Setting) & Environment Test</option>
+				<option value="07">Make Reports</option>
+				<option value="08">Meeting</option>
+				<option value="09">RFC Related</option>
+			</select> <input type="text" id="blur_search_input" /><input type="button"
+				id="blur_search_btn" value="Search" class="button white small" /> <input
+				type="button" id="add_task_btn" value="Add"
+				class="button white small" /> <input type="button"
+				id="delete_task_btn" value="Delete" class="button white small" />
+		</div>
+		<div id="task_management_div">
+			<table id="task_manamgement_table">
+				<tr>
+					<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+					<th><div id="task_id_head">Task ID</div></th>
+					<th><div id="task_name_head">Task Name</div></th>
+					<th><div id="task_type_head">Type</div></th>
+					<th><div id="operation_head">Operation</div></th>
+				</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14080007334" taskType="01"/></td>
+						<td class="blur_match">D14080007334</td>
+						<td class="blur_match">[QWeb]20140822_Q-Web HDMI 결과입력 Column Default 변경요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14080007334" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14080007334" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004963" taskType="01"/></td>
+						<td class="blur_match">D14120004963</td>
+						<td class="blur_match">고액사용자 현황 금액조회 프로세스 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004963" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004963" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005483" taskType="01"/></td>
+						<td class="blur_match">D14110005483</td>
+						<td class="blur_match">(1.24)프로그램사양서_que_HW_MonthBadRate</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005483" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005483" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008663" taskType="01"/></td>
+						<td class="blur_match">D14110008663</td>
+						<td class="blur_match">[프린팅SCM] PRICE COMPARISON UI..</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008663" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008663" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001437" taskType="01"/></td>
+						<td class="blur_match">D14120001437</td>
+						<td class="blur_match">DIMS I/F 신청 결재 현판가 정보 IF</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001437" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001437" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110000964" taskType="01"/></td>
+						<td class="blur_match">D14110000964</td>
+						<td class="blur_match">[긴급변경]GAIS시스템 보안취약점 조치  </td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110000964" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110000964" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120003012" taskType="01"/></td>
+						<td class="blur_match">D14120003012</td>
+						<td class="blur_match">(1.0)프로그램사양서_que_HW_MonthLTERate</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120003012" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120003012" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090001807" taskType="01"/></td>
+						<td class="blur_match">D14090001807</td>
+						<td class="blur_match">[사전예방활동][프린팅 APS-MP UI 2.0]Code Master 속도개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090001807" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090001807" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005668" taskType="01"/></td>
+						<td class="blur_match">D14120005668</td>
+						<td class="blur_match">DIMS I/F 결재(통합) EMS KPI 산정을 위한 TP시스템 시간가...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005668" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005668" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006360" taskType="01"/></td>
+						<td class="blur_match">D14110006360</td>
+						<td class="blur_match">(1.0)프로그램사양서_rma_R20_ForRequestShip</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006360" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006360" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100001497" taskType="01"/></td>
+						<td class="blur_match">D14100001497</td>
+						<td class="blur_match">EDP 진단현황(관리자) 화면 엑셀 파일 출력 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100001497" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100001497" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009104" taskType="01"/></td>
+						<td class="blur_match">D14110009104</td>
+						<td class="blur_match">Fixed Mfgplan 접속시 제품군 구분 여부 확인 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009104" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009104" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110002468" taskType="01"/></td>
+						<td class="blur_match">D14110002468</td>
+						<td class="blur_match">[QNET] 수리 이슈건에 대해 수리완료 로직 적용</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110002468" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110002468" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005123" taskType="01"/></td>
+						<td class="blur_match">D14090005123</td>
+						<td class="blur_match">GBM Report &gt; Daily Sales Trend UI 속도 개선 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005123" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005123" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006677" taskType="01"/></td>
+						<td class="blur_match">D14120006677</td>
+						<td class="blur_match">12월 판매/생산 현황 메일링 레포트 그래프 눈금 조정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006677" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006677" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009865" taskType="01"/></td>
+						<td class="blur_match">D14110009865</td>
+						<td class="blur_match">[변경][PVI] global 사이트 의료기기 모델 preview url 변경 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009865" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009865" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100004432" taskType="01"/></td>
+						<td class="blur_match">D14100004432</td>
+						<td class="blur_match">VIP센터 회의실 추가 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100004432" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100004432" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009619" taskType="01"/></td>
+						<td class="blur_match">D14110009619</td>
+						<td class="blur_match">(DIMS I/F 신청 결재) MDM_SITE_LINE_LOC_IF 사이...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009619" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009619" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004107" taskType="01"/></td>
+						<td class="blur_match">D14120004107</td>
+						<td class="blur_match">[재등록][민방위] 신규시스템 교육관리 - 미신청관리 등록기능 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004107" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004107" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110003744" taskType="01"/></td>
+						<td class="blur_match">D14110003744</td>
+						<td class="blur_match">DIMS I/F 신청 결재 64주 RTF정보 IF Setup 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110003744" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110003744" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090006172" taskType="01"/></td>
+						<td class="blur_match">D14090006172</td>
+						<td class="blur_match">[김도윤]명함 신청시 팩스번호 사서함 자리수 변경요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090006172" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090006172" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007228" taskType="01"/></td>
+						<td class="blur_match">D14110007228</td>
+						<td class="blur_match">EOL Evaluation UI Pop Up Sales / Prod Qty 조회 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007228" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007228" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000521" taskType="01"/></td>
+						<td class="blur_match">D14120000521</td>
+						<td class="blur_match">CPFR UI 內  PO 정보 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000521" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000521" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100007448" taskType="01"/></td>
+						<td class="blur_match">D14100007448</td>
+						<td class="blur_match">[과잉자재 관리시스템] Inventory Plan UI內 Plan별 각주 추가건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100007448" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100007448" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004486" taskType="01"/></td>
+						<td class="blur_match">D14120004486</td>
+						<td class="blur_match">[QWEB - COMMON] Global환경맵 기능 추가 개선: 기존화면...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004486" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004486" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005290" taskType="01"/></td>
+						<td class="blur_match">D14110005290</td>
+						<td class="blur_match">철도할인(10%) 종료 관련 팝업 게시 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005290" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005290" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090009226" taskType="01"/></td>
+						<td class="blur_match">D14090009226</td>
+						<td class="blur_match">[Qnet]비밀번호 변경 화면 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090009226" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090009226" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007915" taskType="01"/></td>
+						<td class="blur_match">D14110007915</td>
+						<td class="blur_match">[사전예방활동] [UI] Conversion View - App 조회 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007915" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007915" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001328" taskType="01"/></td>
+						<td class="blur_match">D14120001328</td>
+						<td class="blur_match">Pre Production UI 개선 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001328" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001328" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100009643" taskType="01"/></td>
+						<td class="blur_match">D14100009643</td>
+						<td class="blur_match">배차 신청 승인 메일 문구 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100009643" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100009643" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090000844" taskType="01"/></td>
+						<td class="blur_match">D14090000844</td>
+						<td class="blur_match">CPFR 신제품 UI 구현 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090000844" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090000844" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005066" taskType="01"/></td>
+						<td class="blur_match">D14120005066</td>
+						<td class="blur_match">DIMS I/F 신청 결재 SC_MCHIP_COST IF (SCIS의 Multichip 재공 원가) 2건 </td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005066" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005066" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005808" taskType="01"/></td>
+						<td class="blur_match">D14110005808</td>
+						<td class="blur_match">________rma_R30_AccCust</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005808" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005808" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008765" taskType="01"/></td>
+						<td class="blur_match">D14110008765</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 MEPLM_CSP KPI 지표 등 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008765" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008765" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120002186" taskType="01"/></td>
+						<td class="blur_match">D14120002186</td>
+						<td class="blur_match"> [PVI][프로그램변경] GBN bar 잘못된 링크 문의</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120002186" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120002186" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004023" taskType="01"/></td>
+						<td class="blur_match">D14120004023</td>
+						<td class="blur_match">[PVI][프로그램변경] Marketing collateral 등록문의</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004023" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004023" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090003961" taskType="01"/></td>
+						<td class="blur_match">D14090003961</td>
+						<td class="blur_match">SLSI 대표코드 체제 전환을 위한 I/F 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090003961" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090003961" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006207" taskType="01"/></td>
+						<td class="blur_match">D14120006207</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 TPM_9_RECORD I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006207" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006207" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006880" taskType="01"/></td>
+						<td class="blur_match">D14110006880</td>
+						<td class="blur_match">Capa. cal UI에 제품군에 맞는 공장만 표기요망</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006880" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006880" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100002183" taskType="01"/></td>
+						<td class="blur_match">D14100002183</td>
+						<td class="blur_match">Mailing Mgmt. UI 보완 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100002183" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100002183" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009370" taskType="01"/></td>
+						<td class="blur_match">D14110009370</td>
+						<td class="blur_match">신뢰성 평가 미사용 컬럼 삭제 및 연관 시스템 정비</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009370" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009370" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110002819" taskType="01"/></td>
+						<td class="blur_match">D14110002819</td>
+						<td class="blur_match">Annual Trend UI 內 그래프 추가 요청 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110002819" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110002819" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005537" taskType="01"/></td>
+						<td class="blur_match">D14090005537</td>
+						<td class="blur_match">[문제예방] SVS-PARK 응답속도 개선활동</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005537" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005537" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000211" taskType="01"/></td>
+						<td class="blur_match">D14120000211</td>
+						<td class="blur_match">[PVI][프로그램변경] Feature Template Disclaimer 추가요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000211" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000211" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100006301" taskType="01"/></td>
+						<td class="blur_match">D14100006301</td>
+						<td class="blur_match">Training Center 엑셀 업로드 행 제한 로직 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100006301" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100006301" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004200" taskType="01"/></td>
+						<td class="blur_match">D14120004200</td>
+						<td class="blur_match">DIMS I/F 중지신청 결재 TPSS MEM/LSI 유실코드 if_KFAW 등 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004200" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004200" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110004054" taskType="01"/></td>
+						<td class="blur_match">D14110004054</td>
+						<td class="blur_match">[QWEB - SERAS] emi 챔버 메일링 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110004054" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110004054" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090007988" taskType="01"/></td>
+						<td class="blur_match">D14090007988</td>
+						<td class="blur_match">[PVI][프로그램변경] 제품타입별 스펙번역 예외 사이트 설정을 위한 개발건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090007988" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090007988" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120007068" taskType="01"/></td>
+						<td class="blur_match">D14120007068</td>
+						<td class="blur_match">항공사 3개 추가 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120007068" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120007068" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007590" taskType="01"/></td>
+						<td class="blur_match">D14110007590</td>
+						<td class="blur_match">단품환산 Logic 개선 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007590" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007590" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001164" taskType="01"/></td>
+						<td class="blur_match">D14120001164</td>
+						<td class="blur_match">[QNET] 수리 이슈 SN 처리 화면 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001164" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001164" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100007899" taskType="01"/></td>
+						<td class="blur_match">D14100007899</td>
+						<td class="blur_match">ALIAS 입력관리 UI 개발 요청 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100007899" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100007899" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14080007255" taskType="01"/></td>
+						<td class="blur_match">D14080007255</td>
+						<td class="blur_match">[QWEB] Change product's name korean to english</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14080007255" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14080007255" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004898" taskType="01"/></td>
+						<td class="blur_match">D14120004898</td>
+						<td class="blur_match">[재등록]DSR 피트니스 탈퇴시(재가입 포함) 수영강습 신청 건 이력 삭...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004898" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004898" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005463" taskType="01"/></td>
+						<td class="blur_match">D14110005463</td>
+						<td class="blur_match">SPEC_rma_R20_ForRegistUpPost.jsp</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005463" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005463" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008334" taskType="01"/></td>
+						<td class="blur_match">D14110008334</td>
+						<td class="blur_match">CPFR PSI UI 개선 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008334" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008334" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001436" taskType="01"/></td>
+						<td class="blur_match">D14120001436</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 IF_TPSS_LOADPORT_INFO</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001436" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001436" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110000870" taskType="01"/></td>
+						<td class="blur_match">D14110000870</td>
+						<td class="blur_match">12M FCST vs Demand UI 內 말풍선 기능 추가 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110000870" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110000870" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120002366" taskType="01"/></td>
+						<td class="blur_match">D14120002366</td>
+						<td class="blur_match">실적 UI FullRoute 테이블 사용조건 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120002366" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120002366" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090001777" taskType="01"/></td>
+						<td class="blur_match">D14090001777</td>
+						<td class="blur_match">[QWeb]MHL Part-test 모델에 대한 Family 인증 신청가능하도록 기능 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090001777" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090001777" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005623" taskType="01"/></td>
+						<td class="blur_match">D14120005623</td>
+						<td class="blur_match">DIMS I/F 결재(통합) EMS KPI 산정을 위한 TP시스템 시간가...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005623" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005623" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006320" taskType="01"/></td>
+						<td class="blur_match">D14110006320</td>
+						<td class="blur_match">DIMS I/F 중지신청 결재</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006320" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006320" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100001494" taskType="01"/></td>
+						<td class="blur_match">D14100001494</td>
+						<td class="blur_match">나의과정 선택 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100001494" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100001494" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008999" taskType="01"/></td>
+						<td class="blur_match">D14110008999</td>
+						<td class="blur_match">DIMS I/F 결재(통합) : TPSS -&gt; ECUS I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008999" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008999" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110001513" taskType="01"/></td>
+						<td class="blur_match">D14110001513</td>
+						<td class="blur_match">[Qnet]현장문제점 CQ I/F된 미등록 사용자에 대해 ID 표기</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110001513" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110001513" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090004976" taskType="01"/></td>
+						<td class="blur_match">D14090004976</td>
+						<td class="blur_match">MDM의 BS_CM_MATCH 테이블 I/F 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090004976" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090004976" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006498" taskType="01"/></td>
+						<td class="blur_match">D14120006498</td>
+						<td class="blur_match">퀵서비스 신청 메뉴 內 '통보자 추가' 메뉴 신설 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006498" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006498" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009816" taskType="01"/></td>
+						<td class="blur_match">D14110009816</td>
+						<td class="blur_match">[QNET] 반환 선적 화면 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009816" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009816" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100003614" taskType="01"/></td>
+						<td class="blur_match">D14100003614</td>
+						<td class="blur_match">Daily Sales Trend UI 內 Category 및 화면 개선 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100003614" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100003614" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009577" taskType="01"/></td>
+						<td class="blur_match">D14110009577</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 -  IF 주기 시간 변경 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009577" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009577" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004102" taskType="01"/></td>
+						<td class="blur_match">D14120004102</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 온양 자재 Master정보 IF시 SOUR...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004102" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004102" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110003238" taskType="01"/></td>
+						<td class="blur_match">D14110003238</td>
+						<td class="blur_match">메일발송관리(학습전) 수정 및 미리보기 기능</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110003238" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110003238" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005990" taskType="01"/></td>
+						<td class="blur_match">D14090005990</td>
+						<td class="blur_match">[QWEB - NSNW] 표준관리 모듈내  결재상신 기능 개선요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005990" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005990" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007030" taskType="01"/></td>
+						<td class="blur_match">D14110007030</td>
+						<td class="blur_match">[QWEB - NSNW] 표준연계설정 화면 업데이트 이슈 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007030" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007030" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000472" taskType="01"/></td>
+						<td class="blur_match">D14120000472</td>
+						<td class="blur_match">[EASY] 기숙사 홈페이지(성현관,지예당) 생활수칙 점수 변경으로 수정...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000472" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000472" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100006719" taskType="01"/></td>
+						<td class="blur_match">D14100006719</td>
+						<td class="blur_match">배차이용 내역 사번 추가 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100006719" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100006719" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004302" taskType="01"/></td>
+						<td class="blur_match">D14120004302</td>
+						<td class="blur_match">[재등록] 기숙사 거주기간 만료예정일 안내 메일 관련</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004302" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004302" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110004826" taskType="01"/></td>
+						<td class="blur_match">D14110004826</td>
+						<td class="blur_match">PIS內  미사용 UI 삭제 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110004826" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110004826" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090009170" taskType="01"/></td>
+						<td class="blur_match">D14090009170</td>
+						<td class="blur_match">주유카드 변경 관련 공지 팝업 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090009170" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090009170" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D1412000963" taskType="01"/></td>
+						<td class="blur_match">D1412000963</td>
+						<td class="blur_match">MOSS D1412000963</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D1412000963" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D1412000963" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007892" taskType="01"/></td>
+						<td class="blur_match">D14110007892</td>
+						<td class="blur_match">[QNET] G-TAC 상태에 조사중, 분석중 추가 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007892" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007892" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001327" taskType="01"/></td>
+						<td class="blur_match">D14120001327</td>
+						<td class="blur_match">Pre Commission UI 內 Logic 변경 요청 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001327" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001327" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100009632" taskType="01"/></td>
+						<td class="blur_match">D14100009632</td>
+						<td class="blur_match">[QWEB - COMMON] SSI (삼성 보안점검 지수) 체크리스트 중 하위 항목 개선할</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100009632" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100009632" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110001394" taskType="01"/></td>
+						<td class="blur_match">D14110001394</td>
+						<td class="blur_match">리더십 진단 상사지정시 상사정보(HR/GHR) 중 GHR정보 선출력</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110001394" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110001394" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14080008501" taskType="01"/></td>
+						<td class="blur_match">D14080008501</td>
+						<td class="blur_match">[Qnet]현장문제점 접수등급 지정방법 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14080008501" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14080008501" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005062" taskType="01"/></td>
+						<td class="blur_match">D14120005062</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 온양 자재 Master정보 IF시 SOURCE DATA 추출 조건 추가 요청 </td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005062" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005062" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005794" taskType="01"/></td>
+						<td class="blur_match">D14110005794</td>
+						<td class="blur_match">(1.4)프로그램사양서_Rma_R20_ForRequestPack</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005794" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005794" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008759" taskType="01"/></td>
+						<td class="blur_match">D14110008759</td>
+						<td class="blur_match">DIMS I/F 결재(통합)</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008759" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008759" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120002022" taskType="01"/></td>
+						<td class="blur_match">D14120002022</td>
+						<td class="blur_match">[QNET] 수리 인도 출고 화면 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120002022" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120002022" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120003834" taskType="01"/></td>
+						<td class="blur_match">D14120003834</td>
+						<td class="blur_match">결재통보 제목에 고유번호 지정 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120003834" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120003834" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090002781" taskType="01"/></td>
+						<td class="blur_match">D14090002781</td>
+						<td class="blur_match">Sales Buffer 프로세스 추가로 인해 선행생산 UI 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090002781" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090002781" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005712" taskType="01"/></td>
+						<td class="blur_match">D14120005712</td>
+						<td class="blur_match">[재등록] 에버랜드 발권장소변경 및 전화번호변경 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005712" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005712" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006723" taskType="01"/></td>
+						<td class="blur_match">D14110006723</td>
+						<td class="blur_match">CPFR ADJUST UI Data 조회 개선 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006723" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006723" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100001859" taskType="01"/></td>
+						<td class="blur_match">D14100001859</td>
+						<td class="blur_match">[UI] LP Tracking report Filed Name 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100001859" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100001859" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009330" taskType="01"/></td>
+						<td class="blur_match">D14110009330</td>
+						<td class="blur_match">노사 첨부파일 다운로드 시 한글 깨짐 수정 요청드립니다.</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009330" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009330" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110002765" taskType="01"/></td>
+						<td class="blur_match">D14110002765</td>
+						<td class="blur_match">(1.6)hdmiTestProbResult_프로그램사양서_hdmiTestProbResult.vm</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110002765" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110002765" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005363" taskType="01"/></td>
+						<td class="blur_match">D14090005363</td>
+						<td class="blur_match">[QWeb-NSNW]등록 조회시작일 수정요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005363" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005363" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120007007" taskType="01"/></td>
+						<td class="blur_match">D14120007007</td>
+						<td class="blur_match">[문제예방] 2014년 12월 Application 응답속도 점검 및 개...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120007007" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120007007" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000181" taskType="01"/></td>
+						<td class="blur_match">D14120000181</td>
+						<td class="blur_match">[SWAP 신청] 심종류 선택 로직수정요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000181" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000181" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100005907" taskType="01"/></td>
+						<td class="blur_match">D14100005907</td>
+						<td class="blur_match">[Qnet]비밀번호 변경 화면 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100005907" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100005907" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009810" taskType="01"/></td>
+						<td class="blur_match">D14110009810</td>
+						<td class="blur_match">[QNET] 수리 인도 화면 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009810" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009810" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004198" taskType="01"/></td>
+						<td class="blur_match">D14120004198</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 TPSS MEM/LSI 유실코드 if_KFBG 등 14건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004198" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004198" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110004016" taskType="01"/></td>
+						<td class="blur_match">D14110004016</td>
+						<td class="blur_match">BB/GB과제 DM단계 재무/체질 금액0원일시 FEA 결재 자동 반영 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110004016" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110004016" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090006898" taskType="01"/></td>
+						<td class="blur_match">D14090006898</td>
+						<td class="blur_match">[프린팅SCM] week 실적 total 로직 보완및 로직 변경요청드립니다</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090006898" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090006898" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007334" taskType="01"/></td>
+						<td class="blur_match">D14110007334</td>
+						<td class="blur_match">[사전예방활동] [UI] RTP Status - Assy Code 조회 ...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007334" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007334" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001161" taskType="01"/></td>
+						<td class="blur_match">D14120001161</td>
+						<td class="blur_match">배차신청 팝업 삭제</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001161" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001161" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100007507" taskType="01"/></td>
+						<td class="blur_match">D14100007507</td>
+						<td class="blur_match">[QWEB - SERUS] HDMI/DisplayPort 모델상세화면(구분1 : 재평가 일 때) 이슈점 통보 기능 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100007507" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100007507" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14080004195" taskType="01"/></td>
+						<td class="blur_match">D14080004195</td>
+						<td class="blur_match">CPFR Resource Mgmt 화면 사용자 편의성 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14080004195" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14080004195" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004738" taskType="01"/></td>
+						<td class="blur_match">D14120004738</td>
+						<td class="blur_match">CPFR 화면 Measure 순서 변경 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004738" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004738" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005326" taskType="01"/></td>
+						<td class="blur_match">D14110005326</td>
+						<td class="blur_match">New Product UI 적용 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005326" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005326" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007938" taskType="01"/></td>
+						<td class="blur_match">D14110007938</td>
+						<td class="blur_match">광주사업장 명함 신청 양식 변경 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007938" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007938" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001389" taskType="01"/></td>
+						<td class="blur_match">D14120001389</td>
+						<td class="blur_match">[프린팅 SCM] GBM Report -> Price Comparison : Dimension 에 ORDER REASON 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001389" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001389" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110000867" taskType="01"/></td>
+						<td class="blur_match">D14110000867</td>
+						<td class="blur_match">DMD vs RTF UI 內 말풍선 기능 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110000867" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110000867" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090001304" taskType="01"/></td>
+						<td class="blur_match">D14090001304</td>
+						<td class="blur_match">문서수발 안내메일 문구 변경 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090001304" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090001304" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005527" taskType="01"/></td>
+						<td class="blur_match">D14120005527</td>
+						<td class="blur_match">Easy Sigma 메뉴 개발</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005527" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005527" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006163" taskType="01"/></td>
+						<td class="blur_match">D14110006163</td>
+						<td class="blur_match">(1.4)schedule_프로그램사양서_schedule.vm</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006163" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006163" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100001262" taskType="01"/></td>
+						<td class="blur_match">D14100001262</td>
+						<td class="blur_match">혁신활동 內 추진계획 '등록일' 필드 이동</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100001262" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100001262" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008783" taskType="01"/></td>
+						<td class="blur_match">D14110008783</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 APS-FP(TP) MSS_PEG_V 변경 신청 등 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008783" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008783" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120002286" taskType="01"/></td>
+						<td class="blur_match">D14120002286</td>
+						<td class="blur_match">WIP Peg. Analysis UI로직 보완요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120002286" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120002286" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110001510" taskType="01"/></td>
+						<td class="blur_match">D14110001510</td>
+						<td class="blur_match">[Qnet]G-TAC 메뉴 정리 및 화면 권한 추가 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110001510" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110001510" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090004588" taskType="01"/></td>
+						<td class="blur_match">D14090004588</td>
+						<td class="blur_match">[Qnet]등록승인자 기본정보 수정화면 수정요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090004588" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090004588" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006274" taskType="01"/></td>
+						<td class="blur_match">D14120006274</td>
+						<td class="blur_match">지원WorkPlace 행사신청 담당자 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006274" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006274" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009812" taskType="01"/></td>
+						<td class="blur_match">D14110009812</td>
+						<td class="blur_match">[QNET] 반환 PACK 화면 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009812" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009812" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100003177" taskType="01"/></td>
+						<td class="blur_match">D14100003177</td>
+						<td class="blur_match">CPFR NEW PRODUCT UI FILTER 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100003177" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100003177" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009550" taskType="01"/></td>
+						<td class="blur_match">D14110009550</td>
+						<td class="blur_match">DIMS I/F 신청 결재 TPSS 설비별 성능효율 정보</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009550" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009550" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004084" taskType="01"/></td>
+						<td class="blur_match">D14120004084</td>
+						<td class="blur_match">DIMS I/F 신청 결재 SC_MCHIP_COST IF (SCIS의 M...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004084" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004084" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110003126" taskType="01"/></td>
+						<td class="blur_match">D14110003126</td>
+						<td class="blur_match">(1.7)requestAuthPopup_프로그램사양서_requestAuthPopup.vm</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110003126" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110003126" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005868" taskType="01"/></td>
+						<td class="blur_match">D14090005868</td>
+						<td class="blur_match">[QWeb]신규 모듈(환경map) 추가 요청 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005868" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005868" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006931" taskType="01"/></td>
+						<td class="blur_match">D14110006931</td>
+						<td class="blur_match">[QNET] 접수출고 영문화 작업</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006931" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006931" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000388" taskType="01"/></td>
+						<td class="blur_match">D14120000388</td>
+						<td class="blur_match">[UI] PORTION SIMULATION UI 데이터 추가 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000388" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000388" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100006512" taskType="01"/></td>
+						<td class="blur_match">D14100006512</td>
+						<td class="blur_match">[QWEB] 계측기 System issue 사항 해결요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100006512" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100006512" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004206" taskType="01"/></td>
+						<td class="blur_match">D14120004206</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 V_LOSS_MTBI_RECORD I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004206" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004206" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110004722" taskType="01"/></td>
+						<td class="blur_match">D14110004722</td>
+						<td class="blur_match">(1.0)fileUpload_프로그램사양서_fileUpload.vm</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110004722" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110004722" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090008322" taskType="01"/></td>
+						<td class="blur_match">D14090008322</td>
+						<td class="blur_match"> [QWEB - SERAS] 시험관리 기능 개선 요청 - EMI 챔버 공실률 관리</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090008322" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090008322" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120008183" taskType="01"/></td>
+						<td class="blur_match">D14120008183</td>
+						<td class="blur_match">(1.3)프로그램사양서_rma_SKT_Upload</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120008183" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120008183" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007827" taskType="01"/></td>
+						<td class="blur_match">D14110007827</td>
+						<td class="blur_match">[EASY] 회원가입 시 종목 선택부분 하단에 종목 설명 및 안내문구 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007827" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007827" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001244" taskType="01"/></td>
+						<td class="blur_match">D14120001244</td>
+						<td class="blur_match">(1.1)프로그램사양서_Rma_R60_Charge</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001244" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001244" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100009615" taskType="01"/></td>
+						<td class="blur_match">D14100009615</td>
+						<td class="blur_match">재공재고 UI : WIP/INV Detail  Dimension 추가 요...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100009615" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100009615" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110001167" taskType="01"/></td>
+						<td class="blur_match">D14110001167</td>
+						<td class="blur_match">EAM 합의/통보자 기능 MENU에 검색 구분자 추가</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110001167" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110001167" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14080007483" taskType="01"/></td>
+						<td class="blur_match">D14080007483</td>
+						<td class="blur_match">[UI] Plan ID 표시 우선순위 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14080007483" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14080007483" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005018" taskType="01"/></td>
+						<td class="blur_match">D14120005018</td>
+						<td class="blur_match">발권장소 및 담당자 연락처 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005018" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005018" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005536" taskType="01"/></td>
+						<td class="blur_match">D14110005536</td>
+						<td class="blur_match">[프린팅 SCM] CODE MASTER UI 속도 개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005536" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005536" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008719" taskType="01"/></td>
+						<td class="blur_match">D14110008719</td>
+						<td class="blur_match">[프린팅 SCM] Supplies Inventory 필터 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008719" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008719" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001946" taskType="01"/></td>
+						<td class="blur_match">D14120001946</td>
+						<td class="blur_match">온양 SESS MTEST 설비효율 산출의 PARA 로직변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001946" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001946" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120003812" taskType="01"/></td>
+						<td class="blur_match">D14120003812</td>
+						<td class="blur_match">12M FCST vs Demand UI 변경 요청 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120003812" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120003812" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090002209" taskType="01"/></td>
+						<td class="blur_match">D14090002209</td>
+						<td class="blur_match">[QWeb]신규 모듈(환경map) 추가 요청 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090002209" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090002209" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005674" taskType="01"/></td>
+						<td class="blur_match">D14120005674</td>
+						<td class="blur_match">DIMS I/F 결재(통합) EMS KPI 산정을 위한 TP시스템 시간가...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005674" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005674" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006535" taskType="01"/></td>
+						<td class="blur_match">D14110006535</td>
+						<td class="blur_match">카드 신청시 병렬결재 프로세스 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006535" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006535" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100001499" taskType="01"/></td>
+						<td class="blur_match">D14100001499</td>
+						<td class="blur_match">EDP 상사진단(사용자) 화면 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100001499" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100001499" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009246" taskType="01"/></td>
+						<td class="blur_match">D14110009246</td>
+						<td class="blur_match">[QNET] G-TAC(터키) 등록결과 조회 이슈</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009246" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009246" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110002748" taskType="01"/></td>
+						<td class="blur_match">D14110002748</td>
+						<td class="blur_match">재공재고 Trend UI 수정 요청 件 (demension 추가)</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110002748" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110002748" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005241" taskType="01"/></td>
+						<td class="blur_match">D14090005241</td>
+						<td class="blur_match">[사전예방활동] 구매자재SCM KPI RTP 상세 팝업 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005241" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005241" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006970" taskType="01"/></td>
+						<td class="blur_match">D14120006970</td>
+						<td class="blur_match">Cutoff UI 개선 요청 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006970" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006970" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000047" taskType="01"/></td>
+						<td class="blur_match">D14120000047</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 APS-EP 속보 판매법인매출 I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000047" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000047" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100005825" taskType="01"/></td>
+						<td class="blur_match">D14100005825</td>
+						<td class="blur_match">Price Comparison 속도개선</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100005825" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100005825" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009710" taskType="01"/></td>
+						<td class="blur_match">D14110009710</td>
+						<td class="blur_match">[QWEB - SERUS] HDMI 인증 의뢰시 Check 리스트 기능 수정요청건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009710" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009710" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004117" taskType="01"/></td>
+						<td class="blur_match">D14120004117</td>
+						<td class="blur_match">[재등록]노사 첨부파일 다운로드 시 한글파일명 깨짐 수정 요청드립니다.</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004117" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004117" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110003999" taskType="01"/></td>
+						<td class="blur_match">D14110003999</td>
+						<td class="blur_match">[QWEB - SERUS] Q-Web HDMI/DisplayPort 인증 모델상세화면 CTS Version 표시 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110003999" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110003999" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090006612" taskType="01"/></td>
+						<td class="blur_match">D14090006612</td>
+						<td class="blur_match">[Qnet ]현장문제점 '타사이슈' 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090006612" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090006612" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007239" taskType="01"/></td>
+						<td class="blur_match">D14110007239</td>
+						<td class="blur_match">CPFR ADJUST UI Data 조회 개선 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007239" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007239" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000807" taskType="01"/></td>
+						<td class="blur_match">D14120000807</td>
+						<td class="blur_match">MP 조립계획수립 UI에서 자재BOM 정보 누락시 화면 display되는...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000807" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000807" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100007449" taskType="01"/></td>
+						<td class="blur_match">D14100007449</td>
+						<td class="blur_match">[과잉자재 관리시스템] Inventory Plan UI內 Plan별 각주 추가건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100007449" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100007449" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004607" taskType="01"/></td>
+						<td class="blur_match">D14120004607</td>
+						<td class="blur_match">[QWEB - SERUS] 반려 이후 처리</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004607" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004607" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005321" taskType="01"/></td>
+						<td class="blur_match">D14110005321</td>
+						<td class="blur_match">[UI] Last week production UI 수정요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005321" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005321" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007930" taskType="01"/></td>
+						<td class="blur_match">D14110007930</td>
+						<td class="blur_match">콜택시 결재상태 반영</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007930" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007930" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001348" taskType="01"/></td>
+						<td class="blur_match">D14120001348</td>
+						<td class="blur_match">생산수율현황 FAB 레포트 ER 구분건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001348" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001348" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110000865" taskType="01"/></td>
+						<td class="blur_match">D14110000865</td>
+						<td class="blur_match">철도 할인메뉴얼 다운로드 확장자 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110000865" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110000865" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090001240" taskType="01"/></td>
+						<td class="blur_match">D14090001240</td>
+						<td class="blur_match">DIMS I/F 신청 결재 - LSI_PEG_DATA, LSI_WIP_INV_DATA I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090001240" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090001240" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120005095" taskType="01"/></td>
+						<td class="blur_match">D14120005095</td>
+						<td class="blur_match">Review Material UI 데이터 구성 기준 보완</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120005095" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120005095" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110005924" taskType="01"/></td>
+						<td class="blur_match">D14110005924</td>
+						<td class="blur_match">시스템 문의처 정보 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110005924" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110005924" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090009516" taskType="01"/></td>
+						<td class="blur_match">D14090009516</td>
+						<td class="blur_match">Daily Sales Trend UI 거래선 조회  수정 件</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090009516" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090009516" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110008768" taskType="01"/></td>
+						<td class="blur_match">D14110008768</td>
+						<td class="blur_match">[민방위] 전입반려 기능 추가 및  소속별 조회 가능 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110008768" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110008768" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120002252" taskType="01"/></td>
+						<td class="blur_match">D14120002252</td>
+						<td class="blur_match">Sales Price UI에서 GC FCST QTY 변경 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120002252" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120002252" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090004391" taskType="01"/></td>
+						<td class="blur_match">D14090004391</td>
+						<td class="blur_match">DIMS I/F 신청 결재 PO_PIS_IPGO_YLD_PLAN(FM) 등 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090004391" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090004391" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120006212" taskType="01"/></td>
+						<td class="blur_match">D14120006212</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 통합예산관리PJT EMS 사내세정 데이터 ...</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120006212" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120006212" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100002969" taskType="01"/></td>
+						<td class="blur_match">D14100002969</td>
+						<td class="blur_match">[Qnet]비밀번호 초기화 화면 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100002969" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100002969" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110009440" taskType="01"/></td>
+						<td class="blur_match">D14110009440</td>
+						<td class="blur_match">[민방위] 데이터 중복표시 화면 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110009440" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110009440" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004058" taskType="01"/></td>
+						<td class="blur_match">D14120004058</td>
+						<td class="blur_match">[변경][PVI] GBM To-do Notice 메일 에러로직 보완처리</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004058" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004058" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110003029" taskType="01"/></td>
+						<td class="blur_match">D14110003029</td>
+						<td class="blur_match">[QWeb-SERUS]Q-Web MHL Check List Test Name 길이 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110003029" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110003029" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090005604" taskType="01"/></td>
+						<td class="blur_match">D14090005604</td>
+						<td class="blur_match">[PVI][프로그램변경] 메일 수신자 변경 문의</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090005604" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090005604" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110006883" taskType="01"/></td>
+						<td class="blur_match">D14110006883</td>
+						<td class="blur_match">Fixed Mfgplan 접속시 제품군 구분 여부 확인 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110006883" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110006883" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120000374" taskType="01"/></td>
+						<td class="blur_match">D14120000374</td>
+						<td class="blur_match">6시그마 과제 영문정보 글자 수정 요청</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120000374" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120000374" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100006476" taskType="01"/></td>
+						<td class="blur_match">D14100006476</td>
+						<td class="blur_match">[QWEB - NSNW] Q-Web 표준관리 모듈 팝업창 추가건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100006476" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100006476" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120004205" taskType="01"/></td>
+						<td class="blur_match">D14120004205</td>
+						<td class="blur_match">DIMS I/F 신청 결재 - BS_CM_HSK_PROD I/F</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120004205" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120004205" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110004430" taskType="01"/></td>
+						<td class="blur_match">D14110004430</td>
+						<td class="blur_match">명함신청 내역 발송인 메일주소 변경</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110004430" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110004430" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14090008143" taskType="01"/></td>
+						<td class="blur_match">D14090008143</td>
+						<td class="blur_match">물류자동화 의뢰 혹은 기준정보 오류 수정 요청건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14090008143" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14090008143" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120007080" taskType="01"/></td>
+						<td class="blur_match">D14120007080</td>
+						<td class="blur_match">[UI] PORTION SIMULATION UI 보완 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120007080" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120007080" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14110007622" taskType="01"/></td>
+						<td class="blur_match">D14110007622</td>
+						<td class="blur_match">DIMS I/F 변경신청 결재 KPI 재공일수 DASHBOARD IF 요청- tar_dashwipdays 등 2건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14110007622" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14110007622" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14120001227" taskType="01"/></td>
+						<td class="blur_match">D14120001227</td>
+						<td class="blur_match">[민방위] 신규시스템 교육관리 - 미신청관리 등록기능 수정</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14120001227" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14120001227" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="D14100008028" taskType="01"/></td>
+						<td class="blur_match">D14100008028</td>
+						<td class="blur_match">[QWeb-NSNW]Q-Web 규칙서 개정 진행 관련 문의 건</td>
+						<td class="blur_match">RFC开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="D14100008028" taskType="01">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="D14100008028" taskType="01">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000039" taskType="02"/></td>
+						<td class="blur_match">T00000000039</td>
+						<td class="blur_match">SVOC技术调查</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000039" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000039" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000030" taskType="02"/></td>
+						<td class="blur_match">T00000000030</td>
+						<td class="blur_match">组内其他工作</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000030" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000030" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000035" taskType="02"/></td>
+						<td class="blur_match">T00000000035</td>
+						<td class="blur_match">开发工时系统</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000035" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000035" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000017" taskType="02"/></td>
+						<td class="blur_match">T00000000017</td>
+						<td class="blur_match">工时统计系统培训</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000017" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000017" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000040" taskType="02"/></td>
+						<td class="blur_match">T00000000040</td>
+						<td class="blur_match">SVN服务器维护</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000040" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000040" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000034" taskType="02"/></td>
+						<td class="blur_match">T00000000034</td>
+						<td class="blur_match">面试工作</td>
+						<td class="blur_match">其他开发</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000034" taskType="02">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000034" taskType="02">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000016" taskType="03"/></td>
+						<td class="blur_match">T00000000016</td>
+						<td class="blur_match">开发流程学习(培训)</td>
+						<td class="blur_match">培训</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000016" taskType="03">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000016" taskType="03">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000018" taskType="03"/></td>
+						<td class="blur_match">T00000000018</td>
+						<td class="blur_match">知识交接培训</td>
+						<td class="blur_match">培训</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000018" taskType="03">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000018" taskType="03">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000025" taskType="03"/></td>
+						<td class="blur_match">T00000000025</td>
+						<td class="blur_match">现有维护系统学习</td>
+						<td class="blur_match">培训</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000025" taskType="03">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000025" taskType="03">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000043" taskType="03"/></td>
+						<td class="blur_match">T00000000043</td>
+						<td class="blur_match">工作交接</td>
+						<td class="blur_match">培训</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000043" taskType="03">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000043" taskType="03">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000023" taskType="04"/></td>
+						<td class="blur_match">T00000000023</td>
+						<td class="blur_match">JAVA学习-基础</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000023" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000023" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000019" taskType="04"/></td>
+						<td class="blur_match">T00000000019</td>
+						<td class="blur_match">在线课程学习</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000019" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000019" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000026" taskType="04"/></td>
+						<td class="blur_match">T00000000026</td>
+						<td class="blur_match">JAVA学习-框架</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000026" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000026" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000014" taskType="04"/></td>
+						<td class="blur_match">T00000000014</td>
+						<td class="blur_match">.Net学习</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000014" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000014" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000029" taskType="04"/></td>
+						<td class="blur_match">T00000000029</td>
+						<td class="blur_match">JS学习(JS/JQuery/Ext/AJAX)</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000029" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000029" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000032" taskType="04"/></td>
+						<td class="blur_match">T00000000032</td>
+						<td class="blur_match">测试学习(编写用例/测试方法)</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000032" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000032" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000013" taskType="04"/></td>
+						<td class="blur_match">T00000000013</td>
+						<td class="blur_match">RIA学习(Flex/X-Platform)</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000013" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000013" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000021" taskType="04"/></td>
+						<td class="blur_match">T00000000021</td>
+						<td class="blur_match">语言学习(韩语、英语等)</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000021" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000021" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000028" taskType="04"/></td>
+						<td class="blur_match">T00000000028</td>
+						<td class="blur_match">前端技术学习(HTML/CSS/JSP)</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000028" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000028" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000011" taskType="04"/></td>
+						<td class="blur_match">T00000000011</td>
+						<td class="blur_match">设计模式学习</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000011" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000011" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000020" taskType="04"/></td>
+						<td class="blur_match">T00000000020</td>
+						<td class="blur_match">数据库学习</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000020" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000020" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000027" taskType="04"/></td>
+						<td class="blur_match">T00000000027</td>
+						<td class="blur_match">JAVA学习-JVM</td>
+						<td class="blur_match">自修</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000027" taskType="04">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000027" taskType="04">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000022" taskType="05"/></td>
+						<td class="blur_match">T00000000022</td>
+						<td class="blur_match">请假</td>
+						<td class="blur_match">休假</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000022" taskType="05">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000022" taskType="05">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000031" taskType="06"/></td>
+						<td class="blur_match">T00000000031</td>
+						<td class="blur_match">VDI环境(配置/验证)</td>
+						<td class="blur_match">Install(Setting) & Environment Test</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000031" taskType="06">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000031" taskType="06">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000024" taskType="07"/></td>
+						<td class="blur_match">T00000000024</td>
+						<td class="blur_match">报表整理(日报/周报/月报/工时)</td>
+						<td class="blur_match">Make Reports</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000024" taskType="07">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000024" taskType="07">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000037" taskType="08"/></td>
+						<td class="blur_match">T00000000037</td>
+						<td class="blur_match">会议、培训准备</td>
+						<td class="blur_match">Meeting</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000037" taskType="08">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000037" taskType="08">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000009" taskType="08"/></td>
+						<td class="blur_match">T00000000009</td>
+						<td class="blur_match">Scrum Meeting(会议)</td>
+						<td class="blur_match">Meeting</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000009" taskType="08">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000009" taskType="08">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000033" taskType="08"/></td>
+						<td class="blur_match">T00000000033</td>
+						<td class="blur_match">集体会议/培训/考试(公司/Part)</td>
+						<td class="blur_match">Meeting</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000033" taskType="08">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000033" taskType="08">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000042" taskType="09"/></td>
+						<td class="blur_match">T00000000042</td>
+						<td class="blur_match">E-ci Team management and communication</td>
+						<td class="blur_match">RFC相关</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000042" taskType="09">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000042" taskType="09">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000036" taskType="09"/></td>
+						<td class="blur_match">T00000000036</td>
+						<td class="blur_match">RFC学习总结/业务理解</td>
+						<td class="blur_match">RFC相关</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000036" taskType="09">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000036" taskType="09">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000041" taskType="09"/></td>
+						<td class="blur_match">T00000000041</td>
+						<td class="blur_match">代码Review</td>
+						<td class="blur_match">RFC相关</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000041" taskType="09">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000041" taskType="09">编辑</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input type="checkbox" name="task_checkbox" taskId="T00000000038" taskType="09"/></td>
+						<td class="blur_match">T00000000038</td>
+						<td class="blur_match">测试用例Review</td>
+						<td class="blur_match">RFC相关</td>
+						<td>
+							<a href="javascript:void(0);" class="delete_task_link" taskId="T00000000038" taskType="09">删除</a>
+							<a href="javascript:void(0);" class="edit_task_link" taskId="T00000000038" taskType="09">编辑</a>
+						</td>
+					</tr>
+				
+			</table>
+		</div>
+	</div>
+</body>
+</html>
